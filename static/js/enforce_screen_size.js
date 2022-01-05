@@ -1,5 +1,5 @@
-// const MINIMAL_WIDTH = 1070; // This should be the real content
-const MINIMAL_WIDTH = 600;
+const MINIMAL_WIDTH = 1070; // This should be the real content
+// const MINIMAL_WIDTH = 600;
 const MINIMAL_HEIGHT = 620;
 
 const CLASS_SHOW_ELEMENT = "show_element";

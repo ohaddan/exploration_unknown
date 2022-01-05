@@ -135,8 +135,9 @@ function get_dictionary_of_rooms(){
 function get_new_reward_distribution(){
     switch(REWARD_DISTRIBUTION) {
         case 'exp_rewards_same':
-            new Distribution(10, 2);
-        case 'decreasing':
+            return new Distribution(10, 2);
+        default:
+            return new Distribution(10, 2);
     }
 }
 function get_out_of_current_room(){

@@ -3,8 +3,8 @@
 // ************************************************************************************************
 const N_COL = 10;
 const N_ROW = 10;
-// const INTER_TRIAL_INTERVAL = 1500;  //ms
-const INTER_TRIAL_INTERVAL = 600;  //ms
+const INTER_TRIAL_INTERVAL = 1500;  //ms
+// const INTER_TRIAL_INTERVAL = 600;  //ms
 const ROOM_ORDER = get_shuffled_list_of_pairs(N_COL, N_ROW);
 
 // ************************************************************************************************

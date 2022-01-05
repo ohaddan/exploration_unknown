@@ -23,12 +23,6 @@ function add_cell_to_map_table_row(tr_parent, r, c, room_symbol=''){
     new_td.id = 'map_table_r' + r + 'c' + c;
     new_td.classList.add(MAP_TABLE_CLASS_NAME);
     new_td.classList.add(HIDDEN_MAP_ROOM);
-    // if (room_symbol){
-    //     new_td.innerText = room_symbol;
-    // }
-    // else{
-    //     new_td.innerText = String(r) + c;
-    // }
     new_td.innerText = '_';
     new_td.onclick = ()=> {move_to_room(r, c)};
     new_td.onmouseenter= ()=> {display_some_room_rewards(r,c)};
