@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../static/css/style.css">
+  <script>const REWARD_DISTRIBUTION =  '{{distribution}}';</script>
+  <script src="../static/js/enforce_screen_size.js"></script>
+  <script src="../static/js/helper_functions.js"></script>
+  <script src="../static/js/create_map_table.js"></script>
+  <script src="../static/js/helper_classes.js"></script>
+  <script src="../static/js/manage_trial.js"></script>
+
+
+  <title>Exploration of the Unknown</title>
+</head>
+<body onload="do_on_load()">
+
+<div id="size_screen_message">The task cannot run on smaller screen, please increase screen size.</div>
+<div id="all_user_content">
+  <div id="head_panel">&nbsp</div>
+
+  <div id="experiment_arena">
+    <!--  experiment_arena-->
+
+    <div id="choice_area">
+      <button type="button" id="choice_button" onclick="choice_button_pressed()">Choose</button>
+    </div>
+    <button id="explore_unknown" onclick="go_to_new_room()">Go to a new room</button>
+    <div id="map">
+      <table id="map_table">
+        <!--      Table is filled in *create_map_table.js*-->
+      </table>
+    </div>
+
+
+  </div>
+  <div id="user_messages">
+    <div id="user_message_reward">Your reward is: $<span id="user_message_reward_amount"></span></div>
+    <div id="user_message_past_rewards">Past rewards: <span id="user_message_past_rewards_amount"></span></div>
+  </div>
+  <div id="footer">&nbsp</div>
+</div>
+</body>
+</html>

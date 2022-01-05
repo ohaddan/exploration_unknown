@@ -1,3 +1,197 @@
-body {
-  background-color: lightblue;
+/* -------------------
+General page structure
+---------------------- */
+body{
+  /*height:100vh;*/
+  height:100%;
+  width:100%;
+  position: absolute;
+
 }
+
+#head_panel{
+  height: 5%;
+  width:100%;
+  background-color: grey;
+}
+
+#experiment_arena{
+  height: 50%;
+  box-sizing: border-box;
+  margin: 2%;
+  padding: 2%;
+  border: solid darkgrey;
+}
+
+#explore_unknown{
+  float: right;
+  height: 15%;
+  width: 20%;
+  background-color:  #2d2d2d;
+  border-radius: 10px;
+  /*margin-right: 2%;*/
+  box-sizing: border-box;
+  color: #e8dbdb;
+  margin-bottom: 1%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#map{
+  border-radius: 10px;
+  width: 20%;
+  height: 80%;
+  background-color: #2d2d2d;
+  padding:1%;
+  color: #e8dbdb;
+  float: right;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#choice_area{
+  background-color: #e9e9f5;
+  float: left;
+  width: 75%;
+  height: 100%;
+}
+
+#user_messages{
+  height: 15%;
+  width:85%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 7.5%;
+  box-sizing: border-box;
+  background-color: #e8dbdb;
+  padding: 2%;
+  position: relative;
+}
+
+#user_message_reward{
+  display: none;
+  padding: 1%;
+  font-size: large;
+}
+
+#user_message_past_rewards{
+  position: absolute;
+  bottom: 0;
+}
+
+.user_message_past_rewards_other_rooms{
+  font-style: italic;
+  color: #7c7c7c;
+  /*transition: color 0.25s;*/
+  /*transition: color 0.5s;*/
+}
+
+#footer{
+  height: 4%;
+  width:100%;
+  background-color: lightgray;
+}
+
+/* -------------------
+Elements design
+---------------------- */
+#map_table{
+  width: 100%;
+  height:100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#choice_button{
+  background-color: #c2c2c2;
+  padding: 2%;
+  border-radius: 10%;
+  margin-left: 45%;
+  margin-top: 12%;
+  font-size: large;
+  /*box-sizing: border-box;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 20%;
+}
+
+#choice_button:hover{
+  background-color: #dedede;
+  cursor: pointer;
+}
+
+button:disabled{
+  cursor: not-allowed !important;
+  background-color: #DFDBE5;
+  color: transparent;
+}
+
+/* -------------------
+Map design
+---------------------- */
+
+.map_table_cell{
+  text-align: center;
+  /*border-radius: 40%;*/
+  border-radius: 1vw;
+  font-family: 'Jomolhari-ID','Tibetan Machine Uni';
+}
+
+.map_hidden_room{
+  background-color: rgba(234, 11, 11, 0);
+  /*color: rgba(0, 0, 0, 0);*/
+  /*font-size: 0; /* This is what causes room on the map to change size
+                  I used it so that when hidden rooms are selected with the cursor
+                   their text would not show. I we want rooms to always have the
+                   same size, this property should be removed (and then think
+                   of a different trick to hide text of hidden rooms if they are selected*/
+  opacity: 0.0;
+  cursor: default;
+  font-size: large;
+}
+
+.map_revealed_room{
+  background-color: #3f3f3f;
+  color: rgba(129, 129, 129, 0.49);
+  cursor: pointer;
+}
+
+.map_revealed_room:hover{
+  color: rgba(227, 227, 227, 0.49);
+  background-color: #808080;
+}
+
+.current_room{
+  background-color: #f1f1f1;
+  color: #000000;
+  box-shadow: 0px 0px 10px 2px rgb(255, 255, 255);
+  cursor: default;
+  border: #3f3f3f 10px;
+}
+
+/* -------------------
+Screen resize
+---------------------- */
+.show_element{
+  display: inline;
+}
+
+.hide_element{
+  display: none;
+}
+
+
+#size_screen_message{
+  align-content: center;
+  font-size: medium;
+}
+
+#all_user_content{}

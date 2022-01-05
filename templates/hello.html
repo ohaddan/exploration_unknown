@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../static/css/style.css">
-    <script src="../static/js/script.js"></script>
+<!--    <script src="../static/js/script.js"></script>-->
 
     <title>title</title>
-    <script src="script.js"></script>
+<!--    <script src="script.js"></script>-->
   </head>
+<!--  <body onload="do_on_load()">-->
   <body>
-    This is the hello page
+  <p id="test_js"></p>
+    {% if name %}
+      <h1>Hello {{ name }}! {{ var }}</h1>
+    {% else %}
+      <h1>Hello, World! {{ var }}</h1>
+    {% endif %}
   </body>
 </html>
