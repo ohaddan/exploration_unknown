@@ -37,5 +37,5 @@ function choice_button_pressed(){
 }
 
 function go_to_next_block(){
-    window.location.href = 'app/next_page';
+    window.location.href = 'next_page';
 }
